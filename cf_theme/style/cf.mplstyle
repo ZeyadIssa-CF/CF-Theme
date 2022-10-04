@@ -1,0 +1,265 @@
+#This is the mplstyle theme for CF. I don't really know what I'm doing so if you see anything wrong please feel free to fix it
+
+## ***************************************************************************
+## * LINES                                                                   *
+## ***************************************************************************
+
+lines.linewidth: 1.5               # line width in points
+lines.linestyle: -                 # solid line
+lines.color:     white                # has no affect on plot(); see axes.prop_cycle
+lines.marker:          None        # the default marker
+lines.markerfacecolor: auto        # the default marker face color
+lines.markeredgecolor: auto        # the default marker edge color
+lines.markeredgewidth: 1.0         # the line width around the marker symbol
+lines.markersize:      6           # marker size, in points
+lines.dash_joinstyle:  round       # {miter, round, bevel}
+lines.dash_capstyle:   butt        # {butt, round, projecting}
+lines.solid_joinstyle: round       # {miter, round, bevel}
+lines.solid_capstyle:  projecting  # {butt, round, projecting}
+lines.antialiased: True            # render lines in antialiased (no jaggies)
+
+## The three standard dash patterns.  These are scaled by the linewidth.
+lines.dashed_pattern: 3.7, 1.6
+lines.dashdot_pattern: 6.4, 1.6, 1, 1.6
+lines.dotted_pattern: 1, 1.65
+lines.scale_dashes: True
+
+markers.fillstyle: full  # {full, left, right, bottom, top, none}
+
+pcolor.shading: auto
+pcolormesh.snap: True  # Whether to snap the mesh to pixel boundaries. This is
+                        # provided solely to allow old test images to remain
+                        # unchanged. Set to False to obtain the previous behavior.
+
+## ***************************************************************************
+## * PATCHES                                                                 *
+## ***************************************************************************
+
+patch.linewidth:       1.0    # edge width in points.
+patch.facecolor:       C0
+patch.edgecolor:       black  # if forced, or patch is not filled
+patch.force_edgecolor: False  # True to always use edgecolor
+patch.antialiased:     True   # render patches in antialiased (no jaggies)
+
+
+## ***************************************************************************
+## * HATCHES                                                                 *
+## ***************************************************************************
+
+hatch.color:     black
+hatch.linewidth: 1.0
+
+## ***************************************************************************
+## * BOXPLOT                                                                 *
+## ***************************************************************************
+
+boxplot.notch:       False
+boxplot.vertical:    True
+boxplot.whiskers:    1.5
+boxplot.bootstrap:   None
+boxplot.patchartist: False
+boxplot.showmeans:   False
+boxplot.showcaps:    True
+boxplot.showbox:     True
+boxplot.showfliers:  True
+boxplot.meanline:    False
+
+boxplot.flierprops.color:           26A5B8
+boxplot.flierprops.marker:          o
+boxplot.flierprops.markerfacecolor: none
+boxplot.flierprops.markeredgecolor: 26A5B8
+boxplot.flierprops.markeredgewidth: 1.0
+boxplot.flierprops.markersize:      6
+boxplot.flierprops.linestyle:       none
+boxplot.flierprops.linewidth:       1.0
+
+boxplot.boxprops.color:     26A5B8
+boxplot.boxprops.linewidth: 1.0
+boxplot.boxprops.linestyle: -
+
+boxplot.whiskerprops.color:     26A5B8
+boxplot.whiskerprops.linewidth: 1.0
+boxplot.whiskerprops.linestyle: -
+
+boxplot.capprops.color:     26A5B8
+boxplot.capprops.linewidth: 1.0
+boxplot.capprops.linestyle: -
+
+boxplot.medianprops.color:     26A5B8
+boxplot.medianprops.linewidth: 1.0
+boxplot.medianprops.linestyle: -
+
+boxplot.meanprops.color:           26A5B8
+boxplot.meanprops.marker:          ^
+boxplot.meanprops.markerfacecolor: 26A5B8
+boxplot.meanprops.markeredgecolor: 26A5B8
+boxplot.meanprops.markersize:       6
+boxplot.meanprops.linestyle:       --
+boxplot.meanprops.linewidth:       1.0
+
+## ***************************************************************************
+## * FONT                                                                    *
+## ***************************************************************************
+
+font.family:  sans-serif
+font.style:   normal
+font.variant: normal
+font.weight:  normal
+font.stretch: normal
+font.size:    10.0
+
+#font.serif:      DejaVu Serif, Bitstream Vera Serif, Computer Modern Roman, New Century Schoolbook, Century Schoolbook L, Utopia, ITC Bookman, Bookman, Nimbus Roman No9 L, Times New Roman, Times, Palatino, Charter, serif
+#font.sans-serif: DejaVu Sans, Bitstream Vera Sans, Computer Modern Sans Serif, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+#font.cursive:    Apple Chancery, Textile, Zapf Chancery, Sand, Script MT, Felipa, Comic Neue, Comic Sans MS, cursive
+#font.fantasy:    Chicago, Charcoal, Impact, Western, Humor Sans, xkcd, fantasy
+#font.monospace:  DejaVu Sans Mono, Bitstream Vera Sans Mono, Computer Modern Typewriter, Andale Mono, Nimbus Mono L, Courier New, Courier, Fixed, Terminal, monospace
+
+
+## ***************************************************************************
+## * GRIDS                                                                   *
+## ***************************************************************************
+
+grid.color:     white  # grid color
+grid.linestyle: -          # solid
+grid.linewidth: 0.8        # in points
+grid.alpha:     1.0        # transparency, between 0.0 and 1.0
+
+## ***************************************************************************
+## * IMAGES                                                                  *
+## ***************************************************************************
+
+image.aspect:          equal        # {equal, auto} or a number
+image.interpolation:   antialiased  # see help(imshow) for options
+image.cmap:            Spectral      # A colormap name (plasma, magma, etc.)
+image.lut:             256          # the size of the colormap lookup table
+image.origin:          upper        # {lower, upper}
+image.resample:        True
+image.composite_image: True  # When True, all the images on a set of axes are
+                              # combined into a single composite image before
+                              # saving a figure as a vector graphics file,
+                              # such as a PDF.
+
+## ***************************************************************************
+## * LEGEND                                                                  *
+## ***************************************************************************
+
+legend.loc:           best
+legend.frameon:       True     # if True, draw the legend on a background patch
+legend.framealpha:    0.8      # legend patch transparency
+legend.facecolor:     inherit  # inherit from axes.facecolor; or color spec
+legend.edgecolor:     0.8      # background patch boundary color
+legend.fancybox:      True     # if True, use a rounded box for the
+                                # legend background, else a rectangle
+legend.shadow:        False    # if True, give background a shadow effect
+legend.numpoints:     1        # the number of marker points in the legend line
+legend.scatterpoints: 1        # number of scatter points
+legend.markerscale:   1.0      # the relative size of legend markers vs. original
+legend.fontsize:      medium
+legend.labelcolor:    None
+legend.title_fontsize: None    # None sets to the same as the default axes.
+
+## Dimensions as fraction of font size:
+legend.borderpad:     0.4  # border whitespace
+legend.labelspacing:  0.5  # the vertical space between the legend entries
+legend.handlelength:  2.0  # the length of the legend lines
+legend.handleheight:  0.7  # the height of the legend handle
+legend.handletextpad: 0.8  # the space between the legend line and legend text
+legend.borderaxespad: 0.5  # the border between the axes and legend edge
+legend.columnspacing: 2.0  # column separation
+
+## ***************************************************************************
+## * ERRORBAR PLOTS                                                          *
+## ***************************************************************************
+#errorbar.capsize: 0  # length of end cap on error bars in pixels
+
+
+## ***************************************************************************
+## * HISTOGRAM PLOTS                                                         *
+## ***************************************************************************
+#hist.bins: 10  # The default number of histogram bins or 'auto'.
+
+
+## ***************************************************************************
+## * SCATTER PLOTS                                                           *
+## ***************************************************************************
+#scatter.marker: o         # The default marker type for scatter plots.
+#scatter.edgecolors: face  # The default edge colors for scatter plots.
+
+
+## ***************************************************************************
+## * AXES                                                                    *
+## ***************************************************************************
+
+axes.facecolor:     white   # axes background color
+axes.edgecolor:     black   # axes edge color
+axes.linewidth:     0.8     # edge line width
+axes.grid:          False   # display grid or not
+axes.grid.axis:     both    # which axis the grid should apply to
+axes.grid.which:    major   # grid lines at {major, minor, both} ticks
+axes.titlelocation: center  # alignment of the title: {left, right, center}
+axes.titlesize:     large   # font size of the axes title
+axes.titleweight:   normal  # font weight of title
+axes.titlecolor:    auto    # color of the axes title, auto falls back to
+                             # text.color as default value
+axes.titley:        None    # position title (axes relative units).  None implies auto
+axes.titlepad:      6.0     # pad between axes and title in points
+axes.labelsize:     medium  # font size of the x and y labels
+axes.labelpad:      4.0     # space between label and axis
+axes.labelweight:   normal  # weight of the x and y labels
+axes.labelcolor:    black
+axes.axisbelow:     line    # draw axis gridlines and ticks:
+                             #     - below patches (True)
+                             #     - above patches but below lines ('line')
+                             #     - above all (False)
+
+axes.formatter.limits: -5, 6  # use scientific notation if log10
+                               # of the axis range is smaller than the
+                               # first or larger than the second
+axes.formatter.use_locale: False  # When True, format tick labels
+                                   # according to the user's locale.
+                                   # For example, use ',' as a decimal
+                                   # separator in the fr_FR locale.
+axes.formatter.use_mathtext: False  # When True, use mathtext for scientific
+                                     # notation.
+axes.formatter.min_exponent: 0  # minimum exponent to format in scientific notation
+axes.formatter.useoffset: True  # If True, the tick label formatter
+                                 # will default to labeling ticks relative
+                                 # to an offset when the data range is
+                                 # small compared to the minimum absolute
+                                 # value of the data.
+axes.formatter.offset_threshold: 4  # When useoffset is True, the offset
+                                     # will be used when it can remove
+                                     # at least this number of significant
+                                     # digits from tick labels.
+
+axes.spines.left:   True  # display axis spines
+axes.spines.bottom: True
+axes.spines.top:    False
+axes.spines.right:  False
+
+axes.unicode_minus: True  # use Unicode for the minus symbol rather than hyphen.  See
+                           # https://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
+                          # [CF Blue, CF Pink, CF Yellow, CF Green, CF Purple, CF Orange]
+axes.prop_cycle: cycler('color', ['26A5B8', 'DD0075', 'F9B122', '429F65','EE7203', '4D227A'])
+                  # color cycle for plot lines as list of string color specs:
+                  # single letter, long name, or web-style hex
+                  # As opposed to all other parameters in this file, the color
+                  # values must be enclosed in quotes for this parameter,
+                  # e.g. '1f77b4', instead of 1f77b4.
+                  # See also https://matplotlib.org/tutorials/intermediate/color_cycle.html
+                  # for more details on prop_cycle usage.
+axes.xmargin:   .05  # x margin.  See `axes.Axes.margins`
+axes.ymargin:   .05  # y margin.  See `axes.Axes.margins`
+axes.zmargin:   .05  # z margin.  See `axes.Axes.margins`
+axes.autolimit_mode: data  # If "data", use axes.xmargin and axes.ymargin as is.
+                            # If "round_numbers", after application of margins, axis
+                            # limits are further expanded to the nearest "round" number.
+polaraxes.grid: True  # display grid on polar axes
+axes3d.grid:    True  # display grid on 3D axes
+
+# 26A5B8 : CF Blue
+# DD0075 : CF Pink
+# F9B122 : CF Yellow
+# 429F65 : CF Green
+# 4D227A : CF Purple
+# EE7203 : CF Orange
