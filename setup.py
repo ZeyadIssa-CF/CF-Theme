@@ -18,7 +18,7 @@ setup(
     version           = __version__,
     ...
     install_requires  = ['matplotlib>=2.0.0'],
-    packages          = ['cf_templte'],
+    packages          = ['cf_template'],
     cmdclass          = {'install': new_install},
     package_data      = {'cf_template/styles':[
         'cf_template/styles/example.mplstyle',
