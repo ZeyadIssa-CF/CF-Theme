@@ -1,25 +1,33 @@
-import atexit
-from setuptools                 import setup
-from setuptools.command.install import install
+# -*- coding: utf-8 -*-
+import matplotlib as mpl
+import glob
+import os.path
+import shutil
+import argparse
 
-def _post_install():
-    import goosempl
-    cf_template.copy_style()
+parser = argparse.ArgumentParser()
+parser.add_argument('-install', action='store_true', default=True)
+parser.add_argument('-upgrade', action='store_true')
+options = parser.parse_args()
 
-class new_install(install):
-    def __init__(self, *args, **kwargs):
-        super(new_install, self).__init__(*args, **kwargs)
-        atexit.register(_post_install)
+#~ # ref  ->  matplotlib/style/core
+BASE_LIBRARY_PATH = os.path.join(matplotlib.get_configdir(),'stylelib')
+STYLE_PATH = os.path.join(os.getcwd(),'mplstyles')
+STYLE_EXTENSION = 'mplstyle'
+style_files = glob.glob(os.path.join(STYLE_PATH,"*.%s"%(STYLE_EXTENSION)))
 
-__version__ = '0.1.0'
+for _path_file in style_files:
+    _, fname = os.path.split(_path_file)
+    dest = os.path.join(BASE_LIBRARY_PATH, fname)
+    if not os.path.isfile(dest) and options.install:
+        shutil.copy(_path_file, dest)
+        print("%s style installed"%(fname))
+    elif options.upgrade:
+        shutil.copy(_path_file, dest)
+        print("%s style upgraded"%(fname))
+    elif os.path.isfile(dest):
+        print("%s style already exists (use -upgrade to upgrade)"%(fname))
+    else:
+        pass # ¿?
 
-setup(
-    name              = 'cf_template',
-    version           = __version__,
-    install_requires  = ['matplotlib>=2.0.0'],
-    packages          = ['cf_template'],
-    cmdclass          = {'install': new_install},
-    package_data      = {'cf_template/styles':[
-        'cf_theme/styles/cf_theme.mplstyle',
-    ]},
-)
+    
