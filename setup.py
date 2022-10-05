@@ -11,7 +11,7 @@ parser.add_argument('-upgrade', action='store_true')
 options = parser.parse_args()
 
 #~ # ref  ->  matplotlib/style/core
-BASE_LIBRARY_PATH = os.path.join(matplotlib.get_configdir(),'stylelib')
+BASE_LIBRARY_PATH = os.path.join(mpl.get_configdir(),'stylelib')
 STYLE_PATH = os.path.join(os.getcwd(),'mplstyles')
 STYLE_EXTENSION = 'mplstyle'
 style_files = glob.glob(os.path.join(STYLE_PATH,"*.%s"%(STYLE_EXTENSION)))
