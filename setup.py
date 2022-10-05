@@ -12,7 +12,7 @@ options = parser.parse_args()
 
 #~ # ref  ->  matplotlib/style/core
 BASE_LIBRARY_PATH = os.path.join(mpl.get_configdir(),'stylelib')
-STYLE_PATH = os.path.join(os.getcwd(),'mplstyles')
+STYLE_PATH = os.path.join(os.getcwd(),'mplstyle')
 STYLE_EXTENSION = 'mplstyle'
 style_files = glob.glob(os.path.join(STYLE_PATH,"*.%s"%(STYLE_EXTENSION)))
 
