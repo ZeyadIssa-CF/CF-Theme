@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# package
 import matplotlib as mpl
 import glob
 import os.path
@@ -10,7 +10,7 @@ parser.add_argument('-install', action='store_true', default=True)
 parser.add_argument('-upgrade', action='store_true')
 options = parser.parse_args()
 
-#~ # ref  ->  matplotlib/style/core
+# ref: need to go in /users/.matplotlib/styles
 BASE_LIBRARY_PATH = os.path.join(mpl.get_configdir(),'stylelib')
 STYLE_PATH = os.path.join(os.getcwd(),'mplstyle')
 STYLE_EXTENSION = 'mplstyle'
@@ -28,6 +28,6 @@ for _path_file in style_files:
     elif os.path.isfile(dest):
         print("%s style already exists (use -upgrade to upgrade)"%(fname))
     else:
-        pass # ¿?
+        pass
 
     
